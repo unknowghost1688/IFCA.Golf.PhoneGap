@@ -57,6 +57,7 @@ if (localStorage.getItem("Token") != "") {
             "Authorization": "Bearer " + localStorage.getItem("Token")
         },
         error: function (jqXHR, exception) {
+		alert(exception);
             if (jqXHR.status === 0) {
                 alert('Not connect.\n Verify Network.');
             } else if (exception == 'timeout') {
