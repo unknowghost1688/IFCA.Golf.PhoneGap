@@ -15,7 +15,7 @@
              $.ajax({
                  type: "POST",
                  contentType: "application/json",
-                 url: URL_API + "/api/User/aaMembershipsActivation?atoken=" + aToken + "&regid=" + regid + "&verifykey=" + verifykey + "&code=" + code ,
+                 url: URL_API + "/api/User/MembershipsActivation?atoken=" + aToken + "&regid=" + regid + "&verifykey=" + verifykey + "&code=" + code ,
                  
                 
              })
