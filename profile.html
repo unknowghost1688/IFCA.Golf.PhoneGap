@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+     <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/GolfTheme.min.css" />
+
+    <!-- Golf style and jQuery -->
+    <link rel="stylesheet" href="css/golfStyle.css">
+
+    <title></title>
+</head>
+<body>
+    <div data-role="page" id="page1">
+
+        <div data-role="content">
+            <a data-role="button" href="booking_menu.html" data-icon="back" class="btnLeft ui-btn-left" data-transition="slide" data-theme="c" data-direction="reverse">back</a>
+
+            <br />
+            <br />
+
+            <ul data-role="listview" data-theme="d" data-inset="true">
+                <li data-theme="c" class="center">
+                    <label>Profile</label>
+                </li>
+                <li data-theme="a" class="center">
+                    <div class="ui-grid-solo">
+                        <h1>Username</h1>
+                        <id id="Username">---NO---</id>
+                    </div>
+                    <br />
+                </li>
+                <li data-theme="a" class="center">
+                    <div class="ui-grid-solo">
+                        <h1>Email</h1>
+                        <id id="Email">---NO---</id>
+                    </div>
+                    <br />
+                </li>
+                <li data-theme="a" class="center">
+                    <div class="ui-grid-solo">
+                        <h1>IC No.</h1>
+                        <id id="IC">---NO---</id>
+                    </div>
+                    <br />
+                </li>
+            </ul>
+
+        </div>
+
+        <script type="text/javascript">
+            $(document).one("pageshow", "#page1", function () {
+
+
+                if (localStorage.getItem("UserName") != null) {
+                    //alert(localStorage.getItem("UserName"));
+                    $("#Username").html(localStorage.getItem("UserName"));
+                } else {
+                    alert("no device Username");
+                }
+
+                if (localStorage.getItem("ICNo") != null) {
+                   // alert(localStorage.getItem("ICNo"));
+                    $("#IC").html(localStorage.getItem("ICNo"));
+                } else {
+                    alert("no device ICNo");
+                }
+
+                if (localStorage.getItem("Email") != null) {
+                   // alert(localStorage.getItem("Email"));
+                    $("#Email").html(localStorage.getItem("Email"));
+                } else {
+                    alert("no device Email");
+                }
+
+            });
+        </script>
+    </div>
+
+
+
+</body>
+</html>

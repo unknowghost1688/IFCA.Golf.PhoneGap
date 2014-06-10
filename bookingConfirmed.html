@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Club Mobile App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/GolfNewStyle.min.css" />
+
+    <!-- Golf style and jQuery -->
+    <link rel="stylesheet" href="css/golfStyle.css">
+</head>
+<body>
+    <div data-role="page" id="page1">
+
+        <div data-role="header" data-theme="d">
+            <img src="images/menu_bar_icon.png" class="btnMenu btnMenu_Click" />
+            <img src="images/back-btn.png" class="btnBack btnBack_Click" />
+            <h1>Booking</h1>
+        </div>
+
+        <div data-role="content">
+            <script src="js/main.js"></script>
+            <script src="js/bookingConfirmed.js"></script>
+            
+
+            <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="b">
+                         <h1 id="bookedCourse"></h1>
+                    </li>
+                    <li data-theme="d">
+                        <div class="ui-grid-b center">
+                            <br />
+                            <div class="ui-block-a">
+                                <img src="images/date.png" class="confimedIcon" /></div>
+                            <div class="ui-block-b">
+                                <img src="images/time.png" class="confimedIcon" /></div>
+                            <div class="ui-block-c">
+                                <img src="images/hole.png" class="confimedIcon" /></div>
+
+                            <div class="ui-block-a">
+                                 <id id="bookedDate"></id>
+                            </div>
+                            <div class="ui-block-b">
+                                <id id="bookedTime" ></id>
+                            </div>
+                            <div class="ui-block-c">
+                                <id id="bookedHole"></id>
+                            </div>
+
+                        </div>
+                        <br />
+                    </li>
+                    <li data-role="list-divider" data-theme="b">
+                        <label id="bookedComfirmation" class="btnLeft"></label>
+                    </li>
+                </ul>
+        </div>
+      <!-- portBox Content -->
+       <!--   <div id="popup_Delete" data-role="popup" data-theme="a" data-overlay-theme="a" class="ui-content" data-position-to="window">
+
+            <div data-role="content">
+
+                <h3 data-them="r">Booking Cancellation</h3>
+
+                <p class="center">Are you sure you want to cancel the booking ?</p>
+
+                <br />
+
+                <a data-role="button" href="booking.html" data-mini="true" data-transition="flow" data-theme="r">YES
+                </a>
+                <a data-role="button" href="bookingConfirmed.html" data-mini="true" data-transition="fade">NO
+                </a>
+            </div>
+        </div>-->
+
+    </div>
+</body>
+</html>

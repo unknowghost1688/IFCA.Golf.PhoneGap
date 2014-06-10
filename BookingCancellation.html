@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Booking History</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/GolfNewStyle.min.css" />
+     <link rel="stylesheet" href="css/golfStyle.css">
+    
+    <script src="js/main.js"></script>
+    <script src="js/BookingCancellation.js"></script>
+
+</head>
+<body>
+    <div data-role="page" id="page1">
+
+        <div data-role="header" data-theme="d">
+             
+            <h1>Booking</h1>
+            <img src="images/menu_bar_icon.png" class="btnMenu btnMenu_Click" />
+            <img src="images/back-btn.png" class="btnBack btnBack_Click" />
+        </div>
+
+        <div id="content" data-role="content">
+
+            <div id="wrapper">
+
+<!--                <img src="images/cross.png" class="deleteIcon btnCancelBooking" />
+                <img src="images/date.png" class="cancellationIcon" />
+                <id>Testing</id>-->
+
+                <!--<div class="RedCancelButton"><a data-role="button" data-icon="delete" data-theme="e" class="btnRight ui-btn-right-cancel ui-link ui-btn ui-btn-e ui-icon-delete ui-btn-icon-left ui-shadow ui-corner-all btnCancelBooking" >Cancel Booking</a></div>-->
+
+            </div>
+        </div>
+
+        <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3>Cancel Booking ?</h3>
+
+
+                <p class="ui-title">Are you sure you want to cancel this booking?</p>
+                <p>This action cannot be undone.</p>
+                <!--				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow" id="cancelBooking">OK</a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                -->
+                <br />
+
+                <a id="cancelBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                </a>
+                <a id="cancelComfirm" data-role="button" data-mini="true" data-transition="fade" data-theme="a" data-rel="back">Cancel
+                </a>
+
+            </div>
+        </div>
+
+        <div data-role="popup" id="CancelSuccess" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3>Booking</h3>
+
+
+                <p class="ui-title">Booking cancellation has been done.</p>                
+                <br />
+
+                <a id="cancelOK" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

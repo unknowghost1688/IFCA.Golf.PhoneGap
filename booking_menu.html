@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Club Mobile App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/GolfNewStyle.min.css" />
+
+    <!-- Golf style and jQuery -->
+    <link rel="stylesheet" href="css/golfStyle.css">
+
+</head>
+<body>
+    <div data-role="page" id="page1">
+
+         <div data-role="header" data-theme="d">
+
+            <h1>Menu</h1>
+
+        </div>
+
+        <br />
+
+            <ul data-role="listview" data-inset="true" data-theme="b">
+
+               <li><a href="newbooking.html" data-transition="slide" rel="external"><img src="images/newbooking.png" class="ui-li-icon ui-corner-none">New Booking</a></li>
+
+               <li><a href="BookingCancellation.html" data-transition="slide" rel="external"><img src="images/cancel.png" class="ui-li-icon ui-corner-none">Cancel Booking</a></li>
+
+            </ul>
+
+          <!--  <a id="logout" data-role="button" data-theme="e">Logout
+            </a>-->
+
+        <script src="js/booking_menu.js"></script>
+          <!--   <script type="text/javascript">
+            $(document).one('pageinit', function () {
+                $(document).one('click', '#logout', function (e) {
+
+                 
+                    localStorage.clear();
+                    window.location.href = "index.html";
+                });
+            });
+            
+        </script>-->
+        
+      
+    </div>
+</body>
+</html>
+
+

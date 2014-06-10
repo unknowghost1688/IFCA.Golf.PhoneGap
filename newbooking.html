@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Club Mobile App</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/GolfNewStyle.min.css" />
+    <!-- Golf style and jQuery -->
+    <link rel="stylesheet" href="css/golfStyle.css">
+
+</head>
+<body>
+    <div data-role="page" id="page1">
+
+        <div data-role="header" data-theme="d">
+            <h1>KLGCC</h1>
+            <img src="images/menu_bar_icon.png" class="btnMenu btnMenu_Click" />
+            <img src="images/back-btn.png" class="btnBack btnBack_Click" />
+        </div>
+
+
+        <div data-role="content">
+            <script src="js/main.js"></script>
+            <script src="js/newbooking.js"></script>
+
+            <!--   
+            <div class="ui-grid-b">
+                 <div class="ui-block-a"><a data-role="button" href="booking_menu.html" data-icon="grid" class="btnLeft ui-btn-left" data-transition="slide" data-theme="c" data-direction="reverse">Menu</a></div>
+                <div class="ui-block-b"><h2 style="color:white">KLGCC</h2></div>
+                <div class="ui-block-c"></div>
+            </div>-->
+
+            <div class="ui-grid-solo">
+                <select id="dropDate" data-native-menu="true" data-mini="true"></select>
+            </div>
+
+            <div class="ui-grid-solo">
+
+                <fieldset data-role="controlgroup" data-type="horizontal" class="center">
+                    <span class="morning">
+                        <input type="radio" name="radio-time" id="radio-mini-1" value="AM" checked="checked" />
+                        <label for="radio-mini-1">Morning</label>
+                    </span>
+                    <span class="noon">
+                        <input type="radio" name="radio-time" id="radio-mini-2" value="PM" />
+                        <label for="radio-mini-2">Afternoon</label>
+                    </span>
+                    <span class="night">
+                        <input type="radio" name="radio-time" id="radio-mini-3" value="NIGHT" />
+                        <label for="radio-mini-3">Night</label>
+                    </span>
+                </fieldset>
+
+            </div>
+
+            <div class="ui-grid-solo">
+                <select data-native-menu="false" id="dropCourse" data-mini="true">
+                </select>
+            </div>
+
+
+            <!--<div class="ui-grid-a ui-responsive" style="margin-top: 10px">-->
+
+
+            <div class="ui-grid-solo">
+                <!-- <select name="flip-1" id="flip-1" data-role="slider" data-mini="true" class="center">
+                        <option value="9">9 hole</option>
+                        <option value="18" selected="selected">18 hole</option>
+                    </select>-->
+                <fieldset data-role="controlgroup" data-type="horizontal" class="center">
+                    <span class="hole">
+                        <input type="radio" name="radio-hole" id="radio1" value="18" checked="checked" />
+                        <label for="radio1">18 Holes</label>
+                        <input type="radio" name="radio-hole" id="radio2" value="9" />
+                        <label for="radio2">9 Holes</label>
+                    </span>
+                </fieldset>
+            </div>
+            <!--</div>-->
+        </div>
+
+        <div class="ui-grid-a">
+            <div class="center" style="background-color: rgba(0,0,0,.40); left: 0; right: 0; width: 100%;">
+                <a id="btnSearch" href="#" class="ui-btn ui-btn-inline" style="background-color: transparent; border: none; padding: 0px 120px">
+                    <img src="images/icon/search.png" /></a>
+                <div class="ui-grid-solo center" id="listFlight" data-theme="d" style="padding: 0px;"></div>
+            </div>
+        </div>
+
+
+        <!-- portBox Content -->
+        <div data-role="popup" id="popup_ErrMsg" data-position-to="window" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3>Error</h3>
+                <p class="ui-title" id="ErroMessage"></p>
+                <a id="closeErrMsg" data-role="button" data-mini="true" data-transition="flow" data-theme="e">OK</a>
+            </div>
+        </div>
+        <div data-role="popup" id="popup_Booking" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="false">
+            <div role="main" class="ui-content" style="background-color: #444; text-align: center; border: 0px">
+                <div style="line-height: 2em;">
+                    <label>KLGCC</label>
+                </div>
+                <div class="CourseLabel">
+                    <label id="Inside-Course"></label>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" style="width: 25%">
+                        <img src="images/date.png" class="BookingIcon" />
+                    </div>
+                    <div class="ui-block-b" style="width: 75%">
+                        <div id="Inside-DateTime" class="BookingWord"></div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" style="width: 25%">
+                        <img src="images/time.png" class="BookingIcon" />
+                    </div>
+                    <div class="ui-block-b" style="width: 75%">
+                        <div id="Inside-Time" class="BookingWord"></div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" style="width: 25%">
+                        <img src="images/hole.png" class="BookingIcon" />
+                    </div>
+                    <div class="ui-block-b" style="width: 75%">
+                        <div id="Inside-Hole" class="BookingWord"></div>
+                    </div>
+                </div>
+                <div>
+                    <!--href="bookingConfirmed.html" -->
+                    <a id="SubmitBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="c">OK
+                    </a>
+                    <a id="cancelComfirm" data-role="button" data-mini="true" data-transition="fade" data-theme="e">Cancel
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

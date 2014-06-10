@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Club Mobile App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery and jQuery Mobile -->
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+
+    <!-- Golf style and jQuery -->
+    <link rel="stylesheet" href="css/golfStyle.css">
+    <link rel="stylesheet" href="css/GolfNewStyle.min.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/activation.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="registration">
+        
+        <div class="logoPosition">
+            <img class="logo" src="images/logo.png" >
+        </div>
+        <br />
+         <br />
+        <div class="Registerbg">
+        <div class="ui-content" >
+                       
+            <label class="center">
+                 4-Digit Code:
+            </label>
+            <input id="code" type="tel" >
+            <label class="center">An SMS has sent to your phone no. please enter the 4 digit code to activate your account.</label>
+
+
+            <br />
+
+  
+
+           <!-- <a data-role="button" href="#popup_resend" data-rel="popup" data-theme="e">Can't receive SMS ?</a>-->
+
+        </div>
+        </div>
+       
+                <button id="activate" class="RegbtnClick" data-mini="true" data-theme="c">
+                Activate
+            </button>
+        <!-- portBox Content -->
+        <div data-role="popup" id="popup_resend" data-position-to="window" data-theme="c" data-overlay-theme="a">
+
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+            <div class="ui-content">
+                <h1>Resend SMS
+                </h1>
+
+                <label>
+                    Your phone no:
+                </label>
+                <input id="phoneNo" type="button" value="012-9344363">
+                
+                <br />
+
+                <label class="center">
+                    Your phone number MUST be registerd in your golf club in order to user the golf mobile app.
+                </label>
+
+                
+
+                <label class="center">
+                   For enquiry, call 03-990 8800.
+                </label>
+
+                <br>
+
+                <div>
+
+                    <button id="Button1" class="btnClick" data-mini="true" data-theme="e">
+                        Resend SMS
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
