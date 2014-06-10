@@ -59,7 +59,7 @@ if (localStorage.getItem("Token") != "") {
         error: function (jqXHR, exception) {
             if (jqXHR.status === 0) {
                 alert('Not connect.\n Verify Network.');
-            } else if (exception === 'timeout') {
+            } else if (exception == 'timeout') {
                 alert('Not connect.\n Verify Network.');
             } else if (jqXHR.status == 404) {
                 alert('Requested page not found. [404]');
