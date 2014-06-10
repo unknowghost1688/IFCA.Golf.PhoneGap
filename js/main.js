@@ -57,10 +57,9 @@ if (localStorage.getItem("Token") != "") {
             "Authorization": "Bearer " + localStorage.getItem("Token")
         },
         error: function (jqXHR, exception) {
-		alert(jqXHR.status + '     ' + exception);
             if (jqXHR.status === 0) {
                 alert('Not connect.\n Verify Network.');
-            } else if (exception == 'timeout') {
+            } else if (jqXHR.status == 404 && exception === 'error') {
                 alert('Not connect.\n Verify Network.');
             } else if (jqXHR.status == 404) {
                 alert('Requested page not found. [404]');
@@ -68,6 +67,8 @@ if (localStorage.getItem("Token") != "") {
                 alert('Internal Server Error [500].');
             } else if (exception === 'parsererror') {
                 alert('Requested JSON parse failed.');
+            } else if (exception === 'timeout') {
+                alert('Time out error.');
             } else if (exception === 'abort') {
                 alert('Ajax request aborted.');
             } else {
