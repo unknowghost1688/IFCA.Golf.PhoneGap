@@ -1,4 +1,5 @@
 ﻿$(document).one('pagecreate', function () {
+
     function navigateToMenu() {
         window.location.href = "login.html";
         // $.mobile.navigate("booking_menu.html");

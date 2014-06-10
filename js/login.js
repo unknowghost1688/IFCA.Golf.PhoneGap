@@ -196,9 +196,9 @@ $(document).one('pagecreate', function () {
                               }
                               );
 
-        }).fail(function () {
+        }).fail(function (data) {
             IsAuthenticated = false;
-            alert("fail authenticate");
+            alert("fail authenticate: " + data);
 
             if (localStorage.getItem("UserName") != undefined) {
                 $("#login").click();
