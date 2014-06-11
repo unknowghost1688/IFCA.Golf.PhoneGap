@@ -10,7 +10,8 @@ $(document).one('pagecreate', function () {
                 alert('Not connect.\n Verify Network.');
             } else if (jqXHR.status == 404) {
                 alert('Requested page not found. [404]');
-
+            } else if (jqXHR.status == 401) {
+                alert('401 Unauthorized');
             } else if (jqXHR.status == 500) {
                 alert('Internal Server Error [500].');
             } else if (exception === 'parsererror') {
@@ -136,14 +137,18 @@ $(document).one('pagecreate', function () {
     function authenticate(msg) {
 
         var IsAuthenticated = false;
+
+        var membershipNO = localStorage.getItem("MembershipNO");
         //alert(msg.access_token);
         var token = {
             DeviceKey: getDeviceID(),
             Token: msg.access_token,
             TokenExpiryDate: msg.expires_in,
-            UserName: msg.userName
+            UserName: msg.userName,
+            MembershipNo : membershipNO
         };
 
+        
 
         $.ajax({
             type: "POST",
@@ -155,7 +160,6 @@ $(document).one('pagecreate', function () {
                 "Authorization": "Bearer " + msg.access_token
             }
         }).done(function (data) {
-
             var msg = JSON.parse(data);
 
             localStorage.setItem("ICNo", msg.ICNo);

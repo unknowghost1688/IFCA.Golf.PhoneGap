@@ -45,6 +45,7 @@
                localStorage.setItem("aToken", ActivationData[0]);
                localStorage.setItem("regid", ActivationData[1]);
                localStorage.setItem("verifykey", ActivationData[2]);
+               localStorage.setItem("MembershipNO", member);
 
                window.location.href = "activation.html";
            }).fail(function (jqXHR, exception) {

@@ -112,13 +112,17 @@ $(document).on('pagebeforeshow', function () {
                     $.mobile.changePage("bookingConfirmed.html", { data: { "BookingID": result } });
                 }
                 else {
-                    $("#popup_ErrMsg").popup("open");
-                    $("#ErroMessage").html("Error When Booking, Please Select Another Date and Time");
+                    $("#popup_Booking").popup("close");
+                    setTimeout(function () { $("#popup_ErrMsg").popup("open"); }, 1000);
+                    $("#ErroMessage").html("Flight Time is not available, Please Select Another Date and Time");
+                    resetAvailabletime();
                 }
             },
             fail: function (jqXHR, exception) {
-                $("#popup_ErrMsg").popup("open");
+                $("#popup_Booking").popup("close");
+                setTimeout(function () { $("#popup_ErrMsg").popup("open"); }, 1000);
                 $("#ErroMessage").html(exception);
+                resetAvailabletime();
             }
         });
     });
