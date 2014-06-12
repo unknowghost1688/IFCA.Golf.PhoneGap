@@ -118,6 +118,9 @@ function submitCancel(membershipno, confirmationid, clubMemberID, courseID, flig
             } else {
                 alert("fail to cancel");
             }
-        }
+        },
+        error: function () {
+            alert("error");
+        },
     });
 }
